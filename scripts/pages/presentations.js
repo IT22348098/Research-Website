@@ -5,7 +5,7 @@ const slides = [
     title: 'Proposal Presentation',
     description: 'Slides covering motivation, problem statement, and planned milestones.',
     linkText: 'View Slides',
-    linkUrl: '#'
+    linkUrl: 'https://docs.google.com/presentation/d/15SAVr6KzjwXqNllZX4qQyI6Q4Gyx38-X/edit?usp=sharing&ouid=116064379739656065020&rtpof=true&sd=true'
   },
 
   {
