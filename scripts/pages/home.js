@@ -1,7 +1,9 @@
 import { createHero, createPageShell, createSection } from '../components.js';
 
 createPageShell('home', (main) => {
+
   main.append(
+
     createHero({
       title: 'AI-Driven Diagnosis of Diabetic Patients from Medical Records',
       description:
@@ -13,28 +15,51 @@ createPageShell('home', (main) => {
     createSection(
       'Project Overview',
       'This research focuses on developing an end-to-end AI system for medical report processing. It transforms scanned medical documents into structured clinical insights by combining image enhancement (U-Net), OCR (Tesseract), medical entity recognition (Bio_ClinicalBERT), diabetes risk prediction (XGBoost), and multilingual summarization (ClinicalT5 and MarianMT). The system aims to improve accessibility, accuracy, and interpretability of diabetic medical reports for both healthcare professionals and patients.'
-    ),
+    )
 
-    createSection(
-      'Key Features',
-      `• Medical image enhancement using deep learning (U-Net)
+  );
 
-    • Automated OCR-based data extraction
+  // Key Features Section
+  const keyFeatureSection = document.createElement('section');
 
-    • Clinical entity recognition and interpretation
+  keyFeatureSection.className = 'card';
 
-    • Diabetes risk prediction using machine learning (XGBoost)
+  const keyTitle = document.createElement('h2');
+  keyTitle.textContent = 'Key Features';
 
-    • Personalized recommendations based on patient data
+  const keyList = document.createElement('ul');
 
-    • Multilingual summarization and translation (Sinhala & Tamil)
+  keyList.style.lineHeight = '2';
+  keyList.style.paddingLeft = '28px';
 
-    • Web-based interactive dashboard for report visualization`
-    ),
+  const features = [
+    'Medical image enhancement using deep learning (U-Net)',
+    'Automated OCR-based data extraction',
+    'Clinical entity recognition and interpretation',
+    'Diabetes risk prediction using machine learning (XGBoost)',
+    'Personalized recommendations based on patient data',
+    'Multilingual summarization and translation (Sinhala & Tamil)',
+    'Web-based interactive dashboard for report visualization'
+  ];
+
+  features.forEach((feature) => {
+    const li = document.createElement('li');
+    li.textContent = feature;
+    keyList.append(li);
+  });
+
+  keyFeatureSection.append(keyTitle, keyList);
+
+  main.append(keyFeatureSection);
+
+  // System Goal Section
+  main.append(
 
     createSection(
       'System Goal',
       'To develop a unified AI-driven healthcare platform that reduces manual effort in interpreting medical reports, improves diagnostic efficiency, and enhances patient understanding through structured, accurate, and multilingual medical insights.'
     )
+
   );
+
 });
