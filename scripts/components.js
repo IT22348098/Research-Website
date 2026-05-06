@@ -22,7 +22,15 @@ export function createNavbar(activeKey) {
   const logo = document.createElement("a");
   logo.className = "logo";
   logo.href = activeKey === "home" ? "index.html" : "../index.html";
-  logo.textContent = "Research Project";
+
+  // Updated Logo
+  logo.innerHTML = `
+    <div class="logo-icon">⌁</div>
+    <div class="logo-text">
+      <strong>Medical Analyzer</strong>
+      <span>AI-Powered Document Insights</span>
+    </div>
+  `;
 
   const nav = document.createElement("nav");
   nav.className = "nav-links";
@@ -30,6 +38,7 @@ export function createNavbar(activeKey) {
   navItems.forEach((item) => {
     const link = document.createElement("a");
     const homeLevel = activeKey === "home";
+
     if (homeLevel) {
       link.href = item.href;
     } else if (item.key === "home") {
@@ -37,13 +46,16 @@ export function createNavbar(activeKey) {
     } else {
       link.href = item.href.replace("pages/", "");
     }
+
     link.className = `nav-link${item.key === activeKey ? " active" : ""}`;
     link.textContent = item.label;
+
     nav.append(link);
   });
 
   inner.append(logo, nav);
   header.append(inner);
+
   return header;
 }
 
@@ -61,6 +73,7 @@ export function createFooter(activeKey) {
   links.className = "footer__links";
 
   const isHome = activeKey === "home";
+
   const linkData = [
     { href: isHome ? "index.html" : "../index.html", text: "Home" },
     { href: isHome ? "pages/contact.html" : "contact.html", text: "Contact" },
@@ -76,6 +89,7 @@ export function createFooter(activeKey) {
 
   inner.append(copy, links);
   footer.append(inner);
+
   return footer;
 }
 
@@ -95,6 +109,7 @@ export function createHero({ title, description, buttonText, buttonLink }) {
   button.href = buttonLink;
 
   section.append(heading, para, button);
+
   return section;
 }
 
@@ -104,6 +119,7 @@ export function createSection(title, content) {
 
   const heading = document.createElement("h2");
   heading.textContent = title;
+
   section.append(heading);
 
   if (typeof content === "string") {
@@ -128,6 +144,7 @@ export function createCard({ title, description, image, linkText, linkUrl }) {
     img.className = "card__image";
     img.src = image;
     img.alt = title;
+
     card.append(img);
   }
 
@@ -140,6 +157,7 @@ export function createCard({ title, description, image, linkText, linkUrl }) {
 
   const body = document.createElement("p");
   body.className = "card__description";
+
   if (typeof description === "string") {
     body.textContent = description;
   } else if (Array.isArray(description)) {
@@ -152,15 +170,18 @@ export function createCard({ title, description, image, linkText, linkUrl }) {
 
   if (linkText && linkUrl) {
     const link = document.createElement("a");
+
     link.className = "card__link";
     link.href = linkUrl;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
     link.textContent = `${linkText} →`;
+
     content.append(link);
   }
 
   card.append(content);
+
   return card;
 }
 
@@ -183,6 +204,7 @@ export function createMilestone({ title, date, marks, details }) {
 
   summary.append(name, meta);
   item.append(summary, detailText);
+
   return item;
 }
 
@@ -202,19 +224,29 @@ export function createContactForm() {
     event.preventDefault();
 
     const status = form.querySelector(".form-status");
+
     const formData = new FormData(form);
+
     const name = formData.get("name");
     const email = formData.get("email");
     const message = formData.get("message");
 
     const subject = "Contact Form Submission";
-    const body = [`Name: ${name}`, `Email: ${email}`, "", message].join("\n");
+
+    const body = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      "",
+      message,
+    ].join("\n");
 
     const mailtoUrl = `mailto:Prointernlk@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
     window.location.href = mailtoUrl;
 
     status.textContent =
       "Your email app should open with the message prefilled.";
+
     form.reset();
   });
 
@@ -223,10 +255,16 @@ export function createContactForm() {
 
 export function createPageShell(activeKey, contentBuilder) {
   const app = document.getElementById("app");
+
   app.className = "page-shell";
 
   const main = document.createElement("main");
+
   contentBuilder(main);
 
-  app.append(createNavbar(activeKey), main, createFooter(activeKey));
+  app.append(
+    createNavbar(activeKey),
+    main,
+    createFooter(activeKey)
+  );
 }
