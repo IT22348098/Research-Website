@@ -13,7 +13,7 @@ const members = [
     id: 'IT22921994',
     email: 'IT22921994@my.sliit.lk',
     phone: '076 881 5480',
-    image: 'https://courseweb.sliit.lk/pluginfile.php/56132/user/icon/lambda2/f1?rev=8487897'
+    image: 'https://media.licdn.com/dms/image/v2/D5635AQH5SL_86iUsuw/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1716265841055?e=1778594400&v=beta&t=iCIyNoOtTuDQ0Gpi8FnB_w0VsS2mPTT6zvnTTyvP2Io'
   },
   {
     title: 'Aadhil M.A.M',
