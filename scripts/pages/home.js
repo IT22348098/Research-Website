@@ -17,13 +17,19 @@ createPageShell('home', (main) => {
 
     createSection(
       'Key Features',
-      '• Medical image enhancement using deep learning (U-Net)\n' +
-      '• Automated OCR-based data extraction\n' +
-      '• Clinical entity recognition and interpretation\n' +
-      '• Diabetes risk prediction using machine learning (XGBoost)\n' +
-      '• Personalized recommendations based on patient data\n' +
-      '• Multilingual summarization and translation (Sinhala & Tamil)\n' +
-      '• Web-based interactive dashboard for report visualization'
+      `• Medical image enhancement using deep learning (U-Net)
+
+    • Automated OCR-based data extraction
+
+    • Clinical entity recognition and interpretation
+
+    • Diabetes risk prediction using machine learning (XGBoost)
+
+    • Personalized recommendations based on patient data
+
+    • Multilingual summarization and translation (Sinhala & Tamil)
+
+    • Web-based interactive dashboard for report visualization`
     ),
 
     createSection(
