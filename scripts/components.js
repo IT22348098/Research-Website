@@ -208,17 +208,13 @@ export function createContactForm() {
     const message = formData.get("message");
 
     const subject = "Contact Form Submission";
-    const body = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      "",
-      message,
-    ].join("\n");
+    const body = [`Name: ${name}`, `Email: ${email}`, "", message].join("\n");
 
     const mailtoUrl = `mailto:Prointernlk@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoUrl;
 
-    status.textContent = "Your email app should open with the message prefilled.";
+    status.textContent =
+      "Your email app should open with the message prefilled.";
     form.reset();
   });
 
