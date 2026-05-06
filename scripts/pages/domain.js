@@ -99,12 +99,30 @@ const references = [
   '[19] Mendeley Data, “Diabetes-related clinical dataset,” Mendeley Data, 2021. [Online]. Available: Diabetes Dataset - Mendeley Data',
 
   '[20] UCI Machine Learning Repository, “Pima Indians Diabetes Database,” Kaggle, 2016. [Online]. Available: https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database'
-].join('<br/><br/>');
+];
 
 createPageShell('domain', (main) => {
+
   sections.forEach(([title, body]) => {
     main.append(createSection(title, body));
   });
 
-  main.append(createSection('References', references));
+  const refSection = document.createElement('section');
+
+  const refTitle = document.createElement('h2');
+  refTitle.textContent = 'References';
+
+  const refList = document.createElement('div');
+  refList.style.lineHeight = '1.8';
+
+  references.forEach((reference) => {
+    const refItem = document.createElement('p');
+    refItem.textContent = reference;
+    refItem.style.marginBottom = '14px';
+    refList.append(refItem);
+  });
+
+  refSection.append(refTitle, refList);
+  main.append(refSection);
+
 });
