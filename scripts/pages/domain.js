@@ -60,45 +60,105 @@ const sections = [
 ];
 
 const references = [
-  '[1] F. A. Shahabuddin, K. R. Kumar, and M. H. Lee, “Medical record abstraction in a hospital with paper-based records,” BJPsych Int., vol. 17, no. 2, pp. 43–44, 2020. [Online]. Available: https://pubmed.ncbi.nlm.nih.gov/32558818/',
+  {
+    text: '[1] F. A. Shahabuddin, K. R. Kumar, and M. H. Lee, “Medical record abstraction in a hospital with paper-based records,” BJPsych Int., vol. 17, no. 2, pp. 43–44, 2020.',
+    link: 'https://pubmed.ncbi.nlm.nih.gov/32558818/'
+  },
 
-  '[2] X. Yang, J. Smith, and R. Patel, “Enhancing doctor–patient communication using large language models for pathology report interpretation,” BMC Med. Inform. Decis. Mak., 2025. [Online]. Available: https://link.springer.com/article/10.1186/s12911-024-02838-z',
+  {
+    text: '[2] X. Yang, J. Smith, and R. Patel, “Enhancing doctor–patient communication using large language models for pathology report interpretation,” BMC Med. Inform. Decis. Mak., 2025.',
+    link: 'https://link.springer.com/article/10.1186/s12911-024-02838-z'
+  },
 
-  '[3] J. P. Martinez, L. Chen, and A. Gupta, “Electronic health records, mobile health, and the challenge of improving global health,” Curr. Probl. Pediatr. Adolesc. Health Care, vol. 51, no. 3, pp. 45–53, 2021. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S1538544221001668',
+  {
+    text: '[3] J. P. Martinez, L. Chen, and A. Gupta, “Electronic health records, mobile health, and the challenge of improving global health,” Curr. Probl. Pediatr. Adolesc. Health Care, vol. 51, no. 3, pp. 45–53, 2021.',
+    link: 'https://www.sciencedirect.com/science/article/pii/S1538544221001668'
+  },
 
-  '[4] M. R. Grover and J. M. Teng, “Paperless healthcare: Progress and challenges of an IT-enabled healthcare system,” Business Horizons, vol. 53, no. 2, pp. 119–130, 2010. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S0007681309001529',
+  {
+    text: '[4] M. R. Grover and J. M. Teng, “Paperless healthcare: Progress and challenges of an IT-enabled healthcare system,” Business Horizons, vol. 53, no. 2, pp. 119–130, 2010.',
+    link: 'https://www.sciencedirect.com/science/article/pii/S0007681309001529'
+  },
 
-  '[5] E. Esteva, A. Robicquet, B. Ramsundar, V. Kuleshov, M. DePristo, K. Chou, C. Cui, G. Corrado, S. Thrun, and J. Dean, “A guide to deep learning in healthcare,” Nature Medicine, vol. 25, no. 1, pp. 24–29, 2019.',
+  {
+    text: '[5] E. Esteva et al., “A guide to deep learning in healthcare,” Nature Medicine, vol. 25, no. 1, pp. 24–29, 2019.',
+    link: 'https://www.nature.com/articles/s41591-018-0316-z'
+  },
 
-  '[6] R. Marulli, A. Battiato, and S. Palazzo, “DocWaveDiff: A Predict-and-Refine Approach for Document Image Enhancement with Wavelet Diffusion,” in Proc. IEEE/CVF Winter Conf. on Applications of Computer Vision (WACV), 2026.',
+  {
+    text: '[6] R. Marulli, A. Battiato, and S. Palazzo, “DocWaveDiff: A Predict-and-Refine Approach for Document Image Enhancement with Wavelet Diffusion,” WACV, 2026.',
+    link: 'https://openaccess.thecvf.com/'
+  },
 
-  '[7] R. Smith, “An overview of the Tesseract OCR engine,” in Proc. Ninth Int. Conf. on Document Analysis and Recognition (ICDAR), 2007, pp. 629–633.',
+  {
+    text: '[7] R. Smith, “An overview of the Tesseract OCR engine,” ICDAR, 2007.',
+    link: 'https://ieeexplore.ieee.org/document/4376991'
+  },
 
-  '[8] J. Lee, W. Yoon, S. Kim, D. Kim, S. Kim, C. H. So, and J. Kang, “BioBERT: A pre-trained biomedical language representation model for biomedical text mining,” Bioinformatics, vol. 36, no. 4, pp. 1234–1240, 2020.',
+  {
+    text: '[8] J. Lee et al., “BioBERT: A pre-trained biomedical language representation model for biomedical text mining,” Bioinformatics, 2020.',
+    link: 'https://academic.oup.com/bioinformatics/article/36/4/1234/5566506'
+  },
 
-  '[9] E. Alsentzer, J. Murphy, W. Boag, W. Weng, D. Jin, T. Naumann, and M. McDermott, “Publicly available clinical BERT embeddings,” in Proc. 2nd Clinical NLP Workshop, 2019, pp. 72–78.',
+  {
+    text: '[9] E. Alsentzer et al., “Publicly available clinical BERT embeddings,” Clinical NLP Workshop, 2019.',
+    link: 'https://aclanthology.org/W19-1909/'
+  },
 
-  '[10] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, L. Kaiser, and I. Polosukhin, “Attention Is All You Need,” in Advances in Neural Information Processing Systems (NeurIPS), 2017.',
+  {
+    text: '[10] A. Vaswani et al., “Attention Is All You Need,” NeurIPS, 2017.',
+    link: 'https://arxiv.org/abs/1706.03762'
+  },
 
-  '[11] J. Smith, A. Kumar, and M. Fernando, “Predictive modeling of diabetes onset using traditional machine learning algorithms,” Journal of Health Informatics, vol. 12, no. 3, pp. 45–56, 2020.',
+  {
+    text: '[11] J. Smith, A. Kumar, and M. Fernando, “Predictive modeling of diabetes onset using traditional machine learning algorithms,” Journal of Health Informatics, 2020.',
+    link: '#'
+  },
 
-  '[12] L. Jones, P. Brown, and T. Wilson, “Ensemble learning approaches for robust clinical decision support in endocrinology,” IEEE Transactions on Biomedical Engineering, vol. 68, no. 4, pp. 1120–1129, 2021.',
+  {
+    text: '[12] L. Jones, P. Brown, and T. Wilson, “Ensemble learning approaches for robust clinical decision support in endocrinology,” IEEE Transactions on Biomedical Engineering, 2021.',
+    link: '#'
+  },
 
-  '[13] D. Perera, S. Wijesinghe, and K. Silva, “Non-communicable disease risk factors in the Sri Lankan demographic,” Sri Lanka Journal of Medical Science, vol. 19, no. 2, pp. 88–99, 2019.',
+  {
+    text: '[13] D. Perera, S. Wijesinghe, and K. Silva, “Non-communicable disease risk factors in the Sri Lankan demographic,” Sri Lanka Journal of Medical Science, 2019.',
+    link: '#'
+  },
 
-  '[14] Y. Chen, H. Wang, and T. Lee, “A rule-based recommendation engine for automated patient lifestyle management,” IEEE/ACM Transactions on Computational Biology and Bioinformatics, vol. 18, no. 6, pp. 2100–2110, 2022.',
+  {
+    text: '[14] Y. Chen, H. Wang, and T. Lee, “A rule-based recommendation engine for automated patient lifestyle management,” IEEE/ACM Transactions on Computational Biology and Bioinformatics, 2022.',
+    link: '#'
+  },
 
-  '[15] J. Devlin, M. Chang, K. Lee, and K. Toutanova, “BERT: Pre-training of deep bidirectional transformers for language understanding,” arXiv preprint arXiv:1810.04805, 2018.',
+  {
+    text: '[15] J. Devlin et al., “BERT: Pre-training of deep bidirectional transformers for language understanding,” arXiv, 2018.',
+    link: 'https://arxiv.org/abs/1810.04805'
+  },
 
-  '[16] L. Xue, N. Constant, A. Roberts, et al., “mT5: A massively multilingual pre-trained text-to-text transformer,” in Proc. NAACL-HLT, 2021, pp. 483–498.',
+  {
+    text: '[16] L. Xue et al., “mT5: A massively multilingual pre-trained text-to-text transformer,” NAACL-HLT, 2021.',
+    link: 'https://arxiv.org/abs/2010.11934'
+  },
 
-  '[17] A. Fernando and K. Perera, “Exploring low-resource neural machine translation for Sinhala–Tamil language models,” in Proc. Recent Advances in Natural Language Processing (RANLP), 2023.',
+  {
+    text: '[17] A. Fernando and K. Perera, “Exploring low-resource neural machine translation for Sinhala–Tamil language models,” RANLP, 2023.',
+    link: '#'
+  },
 
-  '[18] D. A. Singh, “Bajaj Medical Report Dataset,” Kaggle, 2023. [Online]. Available: https://www.kaggle.com/datasets/dikshaasinghhh/bajaj',
+  {
+    text: '[18] D. A. Singh, “Bajaj Medical Report Dataset,” Kaggle, 2023.',
+    link: 'https://www.kaggle.com/datasets/dikshaasinghhh/bajaj'
+  },
 
-  '[19] Mendeley Data, “Diabetes-related clinical dataset,” Mendeley Data, 2021. [Online]. Available: Diabetes Dataset - Mendeley Data',
+  {
+    text: '[19] Mendeley Data, “Diabetes-related clinical dataset,” 2021.',
+    link: 'https://data.mendeley.com/'
+  },
 
-  '[20] UCI Machine Learning Repository, “Pima Indians Diabetes Database,” Kaggle, 2016. [Online]. Available: https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database'
+  {
+    text: '[20] UCI Machine Learning Repository, “Pima Indians Diabetes Database,” Kaggle, 2016.',
+    link: 'https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database'
+  }
 ];
 
 createPageShell('domain', (main) => {
@@ -107,7 +167,6 @@ createPageShell('domain', (main) => {
     main.append(createSection(title, body));
   });
 
-  // References Card Section
   const refSection = document.createElement('section');
 
   refSection.style.background = '#f5f5f5';
@@ -134,11 +193,32 @@ createPageShell('domain', (main) => {
 
     const refItem = document.createElement('p');
 
-    refItem.textContent = reference;
-
     refItem.style.marginBottom = '18px';
     refItem.style.paddingBottom = '12px';
     refItem.style.borderBottom = '1px solid #dbe2ea';
+
+    const refLink = document.createElement('a');
+
+    refLink.href = reference.link;
+    refLink.textContent = reference.text;
+
+    refLink.target = '_blank';
+    refLink.rel = 'noopener noreferrer';
+
+    refLink.style.color = '#1e293b';
+    refLink.style.textDecoration = 'none';
+
+    refLink.addEventListener('mouseover', () => {
+      refLink.style.color = '#2563eb';
+      refLink.style.textDecoration = 'underline';
+    });
+
+    refLink.addEventListener('mouseout', () => {
+      refLink.style.color = '#1e293b';
+      refLink.style.textDecoration = 'none';
+    });
+
+    refItem.append(refLink);
 
     refList.append(refItem);
 
