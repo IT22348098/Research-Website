@@ -23,14 +23,22 @@ createPageShell('home', (main) => {
   const keyFeatureSection = document.createElement('section');
 
   keyFeatureSection.className = 'card';
+  keyFeatureSection.style.padding = '32px';
 
   const keyTitle = document.createElement('h2');
+
   keyTitle.textContent = 'Key Features';
+  keyTitle.style.color = '#1f4f82';
+  keyTitle.style.fontSize = '2.2rem';
+  keyTitle.style.fontWeight = '700';
+  keyTitle.style.marginBottom = '28px';
 
   const keyList = document.createElement('ul');
 
-  keyList.style.lineHeight = '2';
+  keyList.style.lineHeight = '1.9';
   keyList.style.paddingLeft = '28px';
+  keyList.style.fontSize = '1.05rem';
+  keyList.style.color = '#0f172a';
 
   const features = [
     'Medical image enhancement using deep learning (U-Net)',
@@ -43,9 +51,14 @@ createPageShell('home', (main) => {
   ];
 
   features.forEach((feature) => {
+
     const li = document.createElement('li');
+
     li.textContent = feature;
+    li.style.marginBottom = '10px';
+
     keyList.append(li);
+
   });
 
   keyFeatureSection.append(keyTitle, keyList);
