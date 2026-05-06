@@ -140,7 +140,13 @@ export function createCard({ title, description, image, linkText, linkUrl }) {
 
   const body = document.createElement("p");
   body.className = "card__description";
-  body.textContent = description;
+  if (typeof description === "string") {
+    body.textContent = description;
+  } else if (Array.isArray(description)) {
+    description.forEach((node) => body.append(node));
+  } else if (description instanceof Node) {
+    body.append(description);
+  }
 
   content.append(heading, body);
 
@@ -194,8 +200,25 @@ export function createContactForm() {
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+
     const status = form.querySelector(".form-status");
-    status.textContent = "Thank you! Your message has been received.";
+    const formData = new FormData(form);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+
+    const subject = "Contact Form Submission";
+    const body = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      "",
+      message,
+    ].join("\n");
+
+    const mailtoUrl = `mailto:Prointernlk@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
+
+    status.textContent = "Your email app should open with the message prefilled.";
     form.reset();
   });
 
