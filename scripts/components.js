@@ -23,9 +23,13 @@ export function createNavbar(activeKey) {
   logo.className = "logo";
   logo.href = activeKey === "home" ? "index.html" : "../index.html";
 
-  // Updated Logo
   logo.innerHTML = `
-    <div class="logo-icon">⌁</div>
+    <img 
+      class="logo-image" 
+      src="${activeKey === "home" ? "assets/logo.png" : "../assets/logo.png"}" 
+      alt="Medical Analyzer Logo"
+    />
+
     <div class="logo-text">
       <strong>Medical Analyzer</strong>
       <span>AI-Powered Document Insights</span>
