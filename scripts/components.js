@@ -26,7 +26,7 @@ export function createNavbar(activeKey) {
   logo.innerHTML = `
     <img 
       class="logo-image" 
-      src="${activeKey === "home" ? "assets/logo.png" : "../assets/logo.png"}" 
+      src="${activeKey === "home" ? "scripts/assets/logo.png" : "../scripts/assets/logo.png"}" 
       alt="Medical Analyzer Logo"
     />
 
