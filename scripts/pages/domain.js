@@ -107,22 +107,45 @@ createPageShell('domain', (main) => {
     main.append(createSection(title, body));
   });
 
+  // References Card Section
   const refSection = document.createElement('section');
 
+  refSection.style.background = '#f5f5f5';
+  refSection.style.border = '1px solid #d6dde5';
+  refSection.style.borderRadius = '24px';
+  refSection.style.padding = '32px';
+  refSection.style.marginTop = '32px';
+
   const refTitle = document.createElement('h2');
+
   refTitle.textContent = 'References';
+  refTitle.style.color = '#1f4f82';
+  refTitle.style.fontSize = '2.2rem';
+  refTitle.style.fontWeight = '700';
+  refTitle.style.marginBottom = '28px';
 
   const refList = document.createElement('div');
-  refList.style.lineHeight = '1.8';
+
+  refList.style.lineHeight = '1.9';
+  refList.style.fontSize = '1.05rem';
+  refList.style.color = '#1e293b';
 
   references.forEach((reference) => {
+
     const refItem = document.createElement('p');
+
     refItem.textContent = reference;
-    refItem.style.marginBottom = '14px';
+
+    refItem.style.marginBottom = '18px';
+    refItem.style.paddingBottom = '12px';
+    refItem.style.borderBottom = '1px solid #dbe2ea';
+
     refList.append(refItem);
+
   });
 
   refSection.append(refTitle, refList);
+
   main.append(refSection);
 
 });
