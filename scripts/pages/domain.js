@@ -54,33 +54,52 @@ const sections = [
 
   [
     'Technologies Used',
-    'The system is implemented using Python with TensorFlow and PyTorch frameworks. U-Net is used for image enhancement, Tesseract for OCR, Bio_ClinicalBERT for clinical entity extraction and interpretation engine, XGBoost for diabetes risk prediction, and MarianMT and ClinicalT5 for translation and summarization. The frontend is developed using React to provide an interactive and user-friendly interface. Also Models are trained on Google Colab and the Database used is MongoDB.'
+    'The system is implemented using Python with TensorFlow and PyTorch frameworks. U-Net is used for image enhancement, Tesseract for OCR, Bio_ClinicalBERT for clinical entity extraction and interpretation engine, XGBoost for diabetes risk prediction, and MarianMT and ClinicalT5 for translation and summarization. The frontend is developed using React to provide an interactive and user-friendly interface. Models are trained on Google Colab and MongoDB is used as the database.'
   ]
 
 ];
 
 const references = [
   '[1] F. A. Shahabuddin, K. R. Kumar, and M. H. Lee, “Medical record abstraction in a hospital with paper-based records,” BJPsych Int., vol. 17, no. 2, pp. 43–44, 2020. [Online]. Available: https://pubmed.ncbi.nlm.nih.gov/32558818/',
+
   '[2] X. Yang, J. Smith, and R. Patel, “Enhancing doctor–patient communication using large language models for pathology report interpretation,” BMC Med. Inform. Decis. Mak., 2025. [Online]. Available: https://link.springer.com/article/10.1186/s12911-024-02838-z',
+
   '[3] J. P. Martinez, L. Chen, and A. Gupta, “Electronic health records, mobile health, and the challenge of improving global health,” Curr. Probl. Pediatr. Adolesc. Health Care, vol. 51, no. 3, pp. 45–53, 2021. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S1538544221001668',
+
   '[4] M. R. Grover and J. M. Teng, “Paperless healthcare: Progress and challenges of an IT-enabled healthcare system,” Business Horizons, vol. 53, no. 2, pp. 119–130, 2010. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S0007681309001529',
+
   '[5] E. Esteva, A. Robicquet, B. Ramsundar, V. Kuleshov, M. DePristo, K. Chou, C. Cui, G. Corrado, S. Thrun, and J. Dean, “A guide to deep learning in healthcare,” Nature Medicine, vol. 25, no. 1, pp. 24–29, 2019.',
+
   '[6] R. Marulli, A. Battiato, and S. Palazzo, “DocWaveDiff: A Predict-and-Refine Approach for Document Image Enhancement with Wavelet Diffusion,” in Proc. IEEE/CVF Winter Conf. on Applications of Computer Vision (WACV), 2026.',
+
   '[7] R. Smith, “An overview of the Tesseract OCR engine,” in Proc. Ninth Int. Conf. on Document Analysis and Recognition (ICDAR), 2007, pp. 629–633.',
+
   '[8] J. Lee, W. Yoon, S. Kim, D. Kim, S. Kim, C. H. So, and J. Kang, “BioBERT: A pre-trained biomedical language representation model for biomedical text mining,” Bioinformatics, vol. 36, no. 4, pp. 1234–1240, 2020.',
+
   '[9] E. Alsentzer, J. Murphy, W. Boag, W. Weng, D. Jin, T. Naumann, and M. McDermott, “Publicly available clinical BERT embeddings,” in Proc. 2nd Clinical NLP Workshop, 2019, pp. 72–78.',
+
   '[10] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, L. Kaiser, and I. Polosukhin, “Attention Is All You Need,” in Advances in Neural Information Processing Systems (NeurIPS), 2017.',
+
   '[11] J. Smith, A. Kumar, and M. Fernando, “Predictive modeling of diabetes onset using traditional machine learning algorithms,” Journal of Health Informatics, vol. 12, no. 3, pp. 45–56, 2020.',
+
   '[12] L. Jones, P. Brown, and T. Wilson, “Ensemble learning approaches for robust clinical decision support in endocrinology,” IEEE Transactions on Biomedical Engineering, vol. 68, no. 4, pp. 1120–1129, 2021.',
+
   '[13] D. Perera, S. Wijesinghe, and K. Silva, “Non-communicable disease risk factors in the Sri Lankan demographic,” Sri Lanka Journal of Medical Science, vol. 19, no. 2, pp. 88–99, 2019.',
+
   '[14] Y. Chen, H. Wang, and T. Lee, “A rule-based recommendation engine for automated patient lifestyle management,” IEEE/ACM Transactions on Computational Biology and Bioinformatics, vol. 18, no. 6, pp. 2100–2110, 2022.',
+
   '[15] J. Devlin, M. Chang, K. Lee, and K. Toutanova, “BERT: Pre-training of deep bidirectional transformers for language understanding,” arXiv preprint arXiv:1810.04805, 2018.',
+
   '[16] L. Xue, N. Constant, A. Roberts, et al., “mT5: A massively multilingual pre-trained text-to-text transformer,” in Proc. NAACL-HLT, 2021, pp. 483–498.',
+
   '[17] A. Fernando and K. Perera, “Exploring low-resource neural machine translation for Sinhala–Tamil language models,” in Proc. Recent Advances in Natural Language Processing (RANLP), 2023.',
+
   '[18] D. A. Singh, “Bajaj Medical Report Dataset,” Kaggle, 2023. [Online]. Available: https://www.kaggle.com/datasets/dikshaasinghhh/bajaj',
+
   '[19] Mendeley Data, “Diabetes-related clinical dataset,” Mendeley Data, 2021. [Online]. Available: Diabetes Dataset - Mendeley Data',
+
   '[20] UCI Machine Learning Repository, “Pima Indians Diabetes Database,” Kaggle, 2016. [Online]. Available: https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database'
-].join('\n\n');
+].join('<br/><br/>');
 
 createPageShell('domain', (main) => {
   sections.forEach(([title, body]) => {
